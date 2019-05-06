@@ -85,7 +85,7 @@ def home():
 
 @app.route('/', methods = ['POST'])
 def get_request():
-    text = dict(request.form)['req'][0]
+    text = dict(request.form)['req']
     res = get_response(text)
     print(res)
     return res
